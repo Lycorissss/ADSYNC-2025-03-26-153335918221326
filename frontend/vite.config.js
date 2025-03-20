@@ -3,10 +3,28 @@ import { defineConfig } from 'vite';
 import { fileURLToPath, URL } from 'url';
 import environment from 'vite-plugin-environment';
 import tailwindcssVite from '@tailwindcss/vite';
+import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig({
   base: './',
-  plugins: [react(), environment('all', { prefix: 'CANISTER_' }), environment('all', { prefix: 'DFX_' }), tailwindcssVite()],
+  plugins: [react(),
+  environment('all',
+    { prefix: 'CANISTER_' }),
+  environment('all',
+    { prefix: 'DFX_' }),
+  tailwindcssVite(),
+  AutoImport({
+    imports: [
+      'react', // Auto-import React hooks seperti useState, useEffect
+      {
+        'primereact/button': ['Button'],
+        'primereact/inputtext': ['InputText'],
+        'primereact/dialog': ['Dialog'],
+        'primereact/checkbox': ['Checkbox'],
+      },
+    ],
+    dts: 'src/auto-imports.d.ts', // Generate file deklarasi TypeScript
+  }),],
   envDir: '../',
   define: {
     'process.env': process.env
