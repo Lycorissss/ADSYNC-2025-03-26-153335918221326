@@ -1,5 +1,7 @@
 import React from 'react';
 import Features from '../components/Features';
+import Carousel from '../components/Carousel';
+import Threads from '../components/Threads';
 
 const Home = () => {
     return (
@@ -63,33 +65,37 @@ const Home = () => {
             </div>
 
 
-            {/* Konten Kiri */}
-            <div className="container mx-auto px-4 mt-50 text-black max-w-[30%] w-full text-left ml-32 pb-30">
-                <h2 className="text-2xl font-bold mb-4">
-                    Find the Perfect Influencer Instantly
-                </h2>
-                <p className="text-gray-700 mb-6">
-                    Our advanced AI technology analyzes audience demographics, engagement,
-                    and content niche to match advertisers with the most relevant
-                    influencers. This ensures your ads reach the right people at the right
-                    time, maximizing engagement and ROI.
-                </p>
+            <div className="relative w-full h-[600px]">
+  {/* Background (Threads) */}
+  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden mt-50">
+    <div className="absolute top-1/2 left-1/2 w-[120%] h-[120%] transform -translate-x-1/2 -translate-y-1/2">
+      <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+    </div>
+  </div>
+  {/* Konten Kiri (Foreground) */}
+  <div className="relative z-10 container mx-auto px-4 mt-50 text-black max-w-[30%] w-full text-left ml-32 pb-30">
+    <h2 className="text-2xl font-bold mb-4">
+      Find the Perfect Influencer Instantly
+    </h2>
+    <p className="text-gray-700 mb-6">
+      Our advanced AI technology analyzes audience demographics, engagement,
+      and content niche to match advertisers with the most relevant influencers.
+      This ensures your ads reach the right people at the right time, maximizing engagement and ROI.
+    </p>
 
-                <div className="flex flex-col space-y-3">
-                    <button className="border border-black text-black px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">
-                        AI-Powered Matching
-                    </button>
-                    <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
-                        Blockchain Transparency
-                    </button>
-                    <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
-                        Seamless Ad Management
-                    </button>
-                </div>
-            </div>
-
-
-
+    <div className="flex flex-col space-y-3">
+      <button className="border border-black text-black px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">
+        AI-Powered Matching
+      </button>
+      <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
+        Blockchain Transparency
+      </button>
+      <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
+        Seamless Ad Management
+      </button>
+    </div>
+  </div>
+</div>
 
 
             <div className="py-16 px-4 pb-50">
@@ -127,6 +133,14 @@ const Home = () => {
             </div>
 
             <Features />
+
+            <div className="flex justify-center items-center w-full h-screen">
+                <Carousel baseWidth={1300} autoplay={true} autoplayDelay={3000} loop={true} />
+            </div>
+
+
+
+
 
             <footer className="bg-[#0e0e1b] text-white py-10 mt-20">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
@@ -166,13 +180,12 @@ const Home = () => {
                         </a>
                     </div>
 
-
-                    {/* Hak Cipta */}
                     <p className="text-gray-400 text-sm mt-4 md:mt-0">
                         © {new Date().getFullYear()} Adsync. All rights reserved.
                     </p>
                 </div>
             </footer>
+
         </>
     );
 }
