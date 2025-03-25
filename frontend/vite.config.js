@@ -21,10 +21,13 @@ export default defineConfig({
         'primereact/inputtext': ['InputText'],
         'primereact/dialog': ['Dialog'],
         'primereact/checkbox': ['Checkbox'],
+        'primereact/datatable': ['DataTable'],
+        'primereact/column': ['Column'],
       },
     ],
     dts: 'src/auto-imports.d.ts', // Generate file deklarasi TypeScript
-  }),],
+  }),
+],
   envDir: '../',
   define: {
     'process.env': process.env

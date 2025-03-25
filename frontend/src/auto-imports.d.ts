@@ -8,6 +8,8 @@ export {}
 declare global {
   const Button: typeof import('primereact/button')['Button']
   const Checkbox: typeof import('primereact/checkbox')['Checkbox']
+  const Column: typeof import('primereact/column')['Column']
+  const DataTable: typeof import('primereact/datatable')['DataTable']
   const Dialog: typeof import('primereact/dialog')['Dialog']
   const InputText: typeof import('primereact/inputtext')['InputText']
   const createRef: typeof import('react')['createRef']
