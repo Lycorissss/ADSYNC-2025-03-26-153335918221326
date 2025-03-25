@@ -1,8 +1,8 @@
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
 import { fileURLToPath, URL } from 'url';
 import environment from 'vite-plugin-environment';
 import tailwindcssVite from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig({
@@ -15,7 +15,7 @@ export default defineConfig({
   tailwindcssVite(),
   AutoImport({
     imports: [
-      'react', // Auto-import React hooks seperti useState, useEffect
+      'react',
       {
         'primereact/button': ['Button'],
         'primereact/inputtext': ['InputText'],
@@ -27,7 +27,7 @@ export default defineConfig({
     ],
     dts: 'src/auto-imports.d.ts', // Generate file deklarasi TypeScript
   }),
-],
+  ],
   envDir: '../',
   define: {
     'process.env': process.env
