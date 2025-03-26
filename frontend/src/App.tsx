@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./page/Home";
-import AdsDashboard from "./page/advertiser/Dashboard";
+import Home from "./page/Home"
+import AdsDashboard from "./page/advertiser/Dashboard"
 import AdsStore from "./page/advertiser/AdsStore"
 import AdsDetailStore from "./page/advertiser/Details"
+import AdsOrder from "./page/advertiser/Order";
+
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/advertiser/" element={<AdsDashboard />} />
+            <Route path="/advertiser/Order" element={<AdsOrder/>} />
             <Route path="/advertiser/Store" element={<AdsStore/>} />
             <Route path="/advertiser/Store/detail/:id" element={<AdsDetailStore/>} />
         </Routes>
