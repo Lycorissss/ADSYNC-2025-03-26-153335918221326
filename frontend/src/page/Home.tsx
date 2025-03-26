@@ -7,19 +7,20 @@ const Home = () => {
     return (
         <>
             <div
-                className="pb-10 text-white mt-2 ml-2 mr-2 relative rounded-4xl"
+                className="pb-10 text-white relative scrollbar-hide::-webkit-scrollbar"
                 style={{
-                    backgroundImage: "url('/img/Background.png')",
+                    backgroundImage: "url('/img/Bg1.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    WebkitMaskImage: "url('/img/Background.png')",
-                    maskImage: "url('/img/Background.png')",
+                    WebkitMaskImage: "url('/img/Bg1.png')",
+                    maskImage: "url('/img/Bg1.png')",
                     WebkitMaskSize: "100% 100%",
                     maskSize: "100% 100%",
                     WebkitMaskRepeat: "no-repeat",
                     maskRepeat: "no-repeat",
                 }}
             >
+
                 <div className="container mx-auto px-4 mb-25">
                     <header className="relative top-8 flex justify-between items-center py-3 bg-[#0e0e1b] rounded-1-none rounded-full px-8">
                         <div className="flex items-center">
@@ -66,36 +67,36 @@ const Home = () => {
 
 
             <div className="relative w-full h-[600px]">
-  {/* Background (Threads) */}
-  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden mt-50">
-    <div className="absolute top-1/2 left-1/2 w-[120%] h-[120%] transform -translate-x-1/2 -translate-y-1/2">
-      <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
-    </div>
-  </div>
-  {/* Konten Kiri (Foreground) */}
-  <div className="relative z-10 container mx-auto px-4 mt-50 text-black max-w-[30%] w-full text-left ml-32 pb-30">
-    <h2 className="text-2xl font-bold mb-4">
-      Find the Perfect Influencer Instantly
-    </h2>
-    <p className="text-gray-700 mb-6">
-      Our advanced AI technology analyzes audience demographics, engagement,
-      and content niche to match advertisers with the most relevant influencers.
-      This ensures your ads reach the right people at the right time, maximizing engagement and ROI.
-    </p>
+                {/* Background (Threads) */}
+                <div className="absolute inset-0 w-full h-full z-0 overflow-hidden mt-50">
+                    <div className="absolute top-1/2 left-1/2 w-[120%] h-[120%] transform -translate-x-1/2 -translate-y-1/2">
+                        <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+                    </div>
+                </div>
+                {/* Konten Kiri (Foreground) */}
+                <div className="relative z-10 container mx-auto px-4 mt-50 text-black max-w-[30%] w-full text-left ml-32 pb-30">
+                    <h2 className="text-2xl font-bold mb-4">
+                        Find the Perfect Influencer Instantly
+                    </h2>
+                    <p className="text-gray-700 mb-6">
+                        Our advanced AI technology analyzes audience demographics, engagement,
+                        and content niche to match advertisers with the most relevant influencers.
+                        This ensures your ads reach the right people at the right time, maximizing engagement and ROI.
+                    </p>
 
-    <div className="flex flex-col space-y-3">
-      <button className="border border-black text-black px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">
-        AI-Powered Matching
-      </button>
-      <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
-        Blockchain Transparency
-      </button>
-      <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
-        Seamless Ad Management
-      </button>
-    </div>
-  </div>
-</div>
+                    <div className="flex flex-col space-y-3">
+                        <button className="border border-black text-black px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">
+                            AI-Powered Matching
+                        </button>
+                        <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
+                            Blockchain Transparency
+                        </button>
+                        <button className="border border-gray-300 text-gray-400 px-6 py-2 rounded-full bg-transparent cursor-not-allowed">
+                            Seamless Ad Management
+                        </button>
+                    </div>
+                </div>
+            </div>
 
 
             <div className="py-16 px-4 pb-50">
