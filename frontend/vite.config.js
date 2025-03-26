@@ -24,6 +24,7 @@ export default defineConfig({
         'primereact/button': ['Button'],
         'primereact/inputtext': ['InputText'],
         'primereact/dialog': ['Dialog'],
+        'primereact/tag':['Tag'],
         'primereact/checkbox': ['Checkbox'],
         'primereact/datatable': ['DataTable'],
         'primereact/column': ['Column'],

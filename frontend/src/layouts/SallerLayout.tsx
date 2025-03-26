@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Search, Bell, Settings } from "lucide-react";
-import SiderBar from "../components/SiderBar";
+import SiderBar from "../components/SideBarSller";
 
 interface LayoutProps {
     children: ReactNode;
@@ -24,8 +24,8 @@ const SallerLayout = ({ children }: LayoutProps) => {
                         <span>Hi, Michael!</span>
                     </div>
                 </div>
-                <div className="h-screen overflow-scroll pb-25 scrollbar-hide flex flex-col  items-center ">
-                    <div className="pt-5 max-w-[55rem] ">
+                <div className="h-screen overflow-scroll pb-25 scrollbar-hide ">
+                    <div className="pt-5">
                         {children}
                     </div>
                 </div>

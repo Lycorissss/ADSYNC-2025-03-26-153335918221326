@@ -1,4 +1,4 @@
-import AdsLayout from "../../layouts/Layout";
+import SallerLayout from "../../layouts/SallerLayout";
 import { LineChart, Facebook, Instagram, Globe } from "lucide-react";
 import { LineChart as Chart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 const data = [
@@ -12,7 +12,7 @@ const data = [
 export default function Dashboard() {
     return (
         <>
-            <AdsLayout>
+            <SallerLayout>
                 <div className="grid grid-cols-3 gap-4 mt-6">{/* Cards */}
                     <div className="p-6 bg-orange-200 rounded-lg">
                         <LineChart size={24} />
@@ -74,7 +74,7 @@ export default function Dashboard() {
                         </div>
                     </div>
                 </div>
-            </AdsLayout>
+            </SallerLayout>
         </>
     );
 }

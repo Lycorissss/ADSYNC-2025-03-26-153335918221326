@@ -22,6 +22,7 @@ declare global {
   const LineChart: typeof import('recharts')['LineChart']
   const Search: typeof import('lucide-react')['Search']
   const Settings: typeof import('lucide-react')['Settings']
+  const Tag: typeof import('primereact/tag')['Tag']
   const Tooltip: typeof import('recharts')['Tooltip']
   const XAxis: typeof import('recharts')['XAxis']
   const YAxis: typeof import('recharts')['YAxis']
