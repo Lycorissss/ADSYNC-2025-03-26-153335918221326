@@ -11,14 +11,19 @@
   ],
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
+    "framer-motion": "^12.6.0",
     "lucide-react": "^0.483.0",
+    "ogl": "^1.0.11",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.3",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.3.0",
-    "recharts": "^2.15.1",
-    "tailwindcss": "^4.0.14"
+    "recharts": "^2.15.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.16",
     "unplugin-auto-import": "^19.1.1"
   }
 }
