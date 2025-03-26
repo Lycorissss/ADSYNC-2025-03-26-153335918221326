@@ -16,6 +16,11 @@ const App = () => {
             <Route path="/advertiser/Order" element={<AdsOrder/>} />
             <Route path="/advertiser/Store" element={<AdsStore/>} />
             <Route path="/advertiser/Store/detail/:id" element={<AdsDetailStore/>} />
+            <Route path="/saller/" element={<AdsDashboard />} />
+            <Route path="/saller/ads" element={<AdsDashboard />} />
+            <Route path="/saller/ads/create" element={<AdsDashboard />} />
+            <Route path="/saller/ads/edit/:id" element={<AdsDashboard />} />
+            <Route path="/saller/ads/detail/:id" element={<AdsDashboard />} />
         </Routes>
     </Router>
   );
