@@ -20,7 +20,7 @@ const AdsLayout = ({ children }: LayoutProps) => {
                     <div className="flex items-center gap-4">
                         <Bell size={24} />
                         <Settings size={24} />
-                        <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
+                        <div className="w-10 h-10 bg-[url('/img/dashboard/icon-profile.jpg')] bg-cover  rounded-full"></div>
                         <span>Hi, Michael!</span>
                     </div>
                 </div>

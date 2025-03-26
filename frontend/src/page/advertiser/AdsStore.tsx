@@ -1,5 +1,4 @@
 import AdsLayout from "../../layouts/Layout";
-
 const adsData = [
     { id: 1, name: "Adasdasdas 1", platform: "Instagram", duration: "3 days", price: "$15 USD" },
     { id: 2, name: "Ad 2", platform: "Facebook", duration: "5 days", price: "$25 USD" },
