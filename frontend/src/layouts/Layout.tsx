@@ -7,9 +7,10 @@ interface LayoutProps {
 
 const AdsLayout = ({ children }: LayoutProps) => {
     return (
-        <div className="flex h-screen bg-gradient-to-br from-pink-100 to-white">
+        <div className="flex h-screen bg-gradient-to-br from-[#f96d4677] to-[#ffffff18]  overflow-hidden ">
+            <div className="absolute inset-0 bg-[url('/img/bg-dashboard.png')] bg-cover bg-no-repeat -z-2"></div>
             <SiderBar />
-            <div className="flex-1 p-6">
+            <div className="flex-1 p-6 pl-0">
                 <div className="flex justify-between items-center">
                     <div className="relative w-72">
                         <input className="w-full p-2 pl-10 rounded-lg shadow-sm border" type="text" placeholder="Search" />
@@ -22,7 +23,7 @@ const AdsLayout = ({ children }: LayoutProps) => {
                         <span>Hi, Michael!</span>
                     </div>
                 </div>
-                <div className="h-screen overflow-y-auto">
+                <div className="h-screen overflow-y-scroll pb-25 scrollbar-hide">
                     {children}
                 </div>
             </div>
