@@ -25,7 +25,13 @@ export default defineConfig({
         'primereact/column': ['Column'],
       },
     ],
-    dts: 'src/auto-imports.d.ts', // Generate file deklarasi TypeScript
+    dts: 'src/auto-imports.d.ts',
+    dirs: [
+      './src/components', // Auto-import semua komponen dari folder ini
+    ],
+    eslintrc: {
+      enabled: true, // Untuk kompatibilitas dengan ESLint
+    }, 
   }),
   ],
   envDir: '../',
