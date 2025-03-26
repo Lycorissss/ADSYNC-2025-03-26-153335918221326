@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Search, Bell, Settings } from "lucide-react";
 import SiderBar from "../components/SiderBar";
+
 interface LayoutProps {
     children: ReactNode;
 }
@@ -13,7 +14,7 @@ const AdsLayout = ({ children }: LayoutProps) => {
             <div className="flex-1 p-6 pl-0">
                 <div className="flex justify-between items-center">
                     <div className="relative w-72">
-                        <input className="w-full p-2 pl-10 rounded-lg shadow-sm border" type="text" placeholder="Search" />
+                        <input className="w-full p-2 rounded-full bg-white pl-10 shadow-sm border-none" type="text" placeholder="Search" />
                         <Search className="absolute left-3 top-3 text-gray-400" size={16} />
                     </div>
                     <div className="flex items-center gap-4">
@@ -24,7 +25,9 @@ const AdsLayout = ({ children }: LayoutProps) => {
                     </div>
                 </div>
                 <div className="h-screen overflow-y-scroll pb-25 scrollbar-hide">
-                    {children}
+                    <div className="pt-10">
+                        {children}
+                    </div>
                 </div>
             </div>
         </div>

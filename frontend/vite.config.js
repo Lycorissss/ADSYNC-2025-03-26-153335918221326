@@ -7,13 +7,17 @@ import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig({
   base: './',
-  plugins: [react(),
+  plugins: [
+    react(),
   environment('all',
     { prefix: 'CANISTER_' }),
   environment('all',
     { prefix: 'DFX_' }),
   tailwindcssVite(),
   AutoImport({
+    include: [
+      /\.[tj]sx?$/, // Untuk auto-import di file .ts, .tsx, .js, .jsx
+    ],
     imports: [
       'react',
       {
@@ -29,9 +33,6 @@ export default defineConfig({
     dirs: [
       './src/components', // Auto-import semua komponen dari folder ini
     ],
-    eslintrc: {
-      enabled: true, // Untuk kompatibilitas dengan ESLint
-    }, 
   }),
   ],
   envDir: '../',
